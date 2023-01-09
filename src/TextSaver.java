@@ -1,7 +1,6 @@
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class TextSaver {
     private TextTransformer tt;
@@ -38,9 +37,13 @@ public class TextSaver {
 
     private static void writeUsingFiles(String text) {
         try {
-            Files.write(Paths.get("/Users/ac/IdeaProjects/TextTransformer/src/Text.txt"), text.getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
+            FileWriter writer = new FileWriter("/Users/ac/IdeaProjects/TextTransformer/src/Text.txt", true);
+            writer.append(text);
+            writer.append('\n');
+            writer.flush();
+        }
+        catch(IOException ex){
+            System.out.println(ex.getMessage());
         }
     }
 
