@@ -16,9 +16,4 @@ public class UpDownTransformer extends TextTransformer {
         }
         return result;
     }
-
-    @Override
-    public String toString() {
-        return "UpDownTransformer{}";
-    }
 }

@@ -12,9 +12,4 @@ public class InverseTransformer extends TextTransformer {
         }
         return result;
     }
-
-    @Override
-    public String toString() {
-        return "InverseTransformer{}";
-    }
 }
